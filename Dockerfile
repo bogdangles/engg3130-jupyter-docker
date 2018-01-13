@@ -3,6 +3,8 @@ ARG JUPYTERHUB_VERSION=0.8.1
 RUN pip install --no-cache \
     jupyterhub==$JUPYTERHUB_VERSION
 
-COPY environment.yml environment.yml
-RUN conda env update -f environment.yml -n root
+COPY environment.yml /tmp/environment.yml
+RUN conda env update -f /tmp/environment.yml -n root && \
+    conda clean --all -y && \
+    rm -rf ~/.cache/pip
 
