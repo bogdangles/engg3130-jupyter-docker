@@ -4,4 +4,4 @@
 
 set -e
 
-. /usr/local/bin/start.sh jupyter notebook $*
+. /home/jovyan/start.sh jupyter notebook $*
