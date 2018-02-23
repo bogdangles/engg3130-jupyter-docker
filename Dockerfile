@@ -1,5 +1,12 @@
 FROM jupyter/scipy-notebook:400c69639ea5
 ARG JUPYTERHUB_VERSION=0.8.1
+
+USER root
+RUN apt-get update \
+ && apt-get install -y dieharder \
+ && rm -rf /var/lib/apt/lists/*
+
+USER jovyan
 RUN pip install --no-cache \
     jupyterhub==$JUPYTERHUB_VERSION
 
@@ -8,7 +15,3 @@ RUN conda env update -f /tmp/environment.yml -n root && \
     conda clean --all -y && \
     rm -rf ~/.cache/pip
 
-USER root
-RUN apt-get update \
- && apt-get install -y dieharder \
- && rm -rf /var/lib/apt/lists/*
