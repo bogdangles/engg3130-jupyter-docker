@@ -8,6 +8,7 @@ RUN conda env update -f /tmp/environment.yml -n root && \
     conda clean --all -y && \
     rm -rf ~/.cache/pip
 
-RUN apt-get update && apt-get install -y \
-    dieharder \
+USER root
+RUN apt-get update \
+ && apt-get install -y dieharder \
  && rm -rf /var/lib/apt/lists/*
