@@ -1,5 +1,5 @@
-FROM jupyter/scipy-notebook:400c69639ea5
-ARG JUPYTERHUB_VERSION=0.8.1
+FROM jupyter/scipy-notebook:latest
+ARG JUPYTERHUB_VERSION=1.2.2
 
 USER root
 RUN apt-get update \

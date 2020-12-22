@@ -2,14 +2,15 @@ name: engg3130
 channels:
   - conda-forge
 dependencies:
-  - python=3.6
+  - python
   - numpy
   - scipy
   - pandas
   - matplotlib
   - sphinx
   - jupyter
-  - networkx=1.*
+    #  - networkx=1.*
+  - networkx
   - nbstripout
   - seaborn
   - tqdm
