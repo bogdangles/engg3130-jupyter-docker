@@ -1,5 +1,5 @@
 FROM jupyter/scipy-notebook:latest
-ARG JUPYTERHUB_VERSION=1.2.2
+ARG JUPYTERHUB_VERSION=1.3.0
 
 USER root
 RUN apt-get update \
@@ -15,3 +15,6 @@ RUN conda env update -f /tmp/environment.yml -n root && \
     conda clean --all -y && \
     rm -rf ~/.cache/pip
 
+#USER root
+#RUN npm install -g webpack webpack-cli fs-extra style-loader css-loader
+#RUN npm install -g jupyter-matplotlib
