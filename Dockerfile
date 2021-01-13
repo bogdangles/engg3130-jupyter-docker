@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook:latest
+FROM jupyter/base-notebook:latest
 ARG JUPYTERHUB_VERSION=1.3.0
 
 USER root
