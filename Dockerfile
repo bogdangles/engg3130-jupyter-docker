@@ -14,7 +14,3 @@ COPY environment.yml /tmp/environment.yml
 RUN conda env update -f /tmp/environment.yml -n root && \
     conda clean --all -y && \
     rm -rf ~/.cache/pip
-
-#USER root
-#RUN npm install -g webpack webpack-cli fs-extra style-loader css-loader
-#RUN npm install -g jupyter-matplotlib
