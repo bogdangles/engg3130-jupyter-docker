@@ -1,5 +1,6 @@
 name: engg3130
 channels:
+  - vpython
   - conda-forge
 dependencies:
   - python=3
@@ -17,3 +18,4 @@ dependencies:
     - empiricaldist
   - python-language-server
   - jupyterlab-lsp
+  - vpython
