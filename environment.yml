@@ -17,6 +17,6 @@ dependencies:
   - pip:
     - empiricaldist
     - jupyterlab-vpython
-  - python-language-server
+  - python-lsp-server
   - jupyterlab-lsp
   - vpython
