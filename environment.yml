@@ -4,7 +4,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3
-  - jupyterlab=3
+  - jupyterlab==3.0.15
   - xeus-python>=0.12.0
   - numpy
   - matplotlib
@@ -16,7 +16,7 @@ dependencies:
   - pip
   - pip:
     - empiricaldist
-    - jupyterlab-vpython
+    - jupyterlab-vpython==3.0.4
   - python-lsp-server
   - jupyterlab-lsp
-  - vpython
+  - vpython==7.6.1
