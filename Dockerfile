@@ -1,7 +1,7 @@
 FROM jupyter/base-notebook:latest
 
 
-ARG JUPYTERHUB_VERSION=4.0.2
+ARG JUPYTERHUB_VERSION=5.2.1
 
 USER root
 RUN apt-get update \
